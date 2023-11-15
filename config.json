@@ -1,5 +1,5 @@
 {
     "pat": "PAT GOES HERE",
     "username": "sbrTolemi",
-    "data_file_path": "data_file.csv"
+    "dataFilePath": "data_file.csv"
 }

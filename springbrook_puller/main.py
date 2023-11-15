@@ -84,7 +84,7 @@ def load_config(file_path):
 
     pat = raw_config.get('pat', None)
     username = raw_config.get('username', None)
-    data_file_path = raw_config.get('data_file_path', None)
+    data_file_path = raw_config.get('dataFilePath', None)
 
     return Config(pat, username, data_file_path)
 
