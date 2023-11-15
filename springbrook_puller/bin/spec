@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cat <<EOF
+{
+    "type": "SPEC",
+    "spec": {
+        "title": "Springbrook Puller",
+        "type": "object",
+        "properties": {
+            "username": {
+                "type": "varchar"}
+            "pat": {
+                "type": "varchar"
+            }
+        }
+    }
+}
+EOF
