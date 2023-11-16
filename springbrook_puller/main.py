@@ -80,7 +80,7 @@ def fail(error):
 
 def load_config(file_path):
     raw_config = load_json(file_path)
-    print('RAW CONFIG', raw_config)
+    #print('RAW CONFIG', raw_config)
 
     data_file_path = raw_config.get('dataFilePath', None)
 
