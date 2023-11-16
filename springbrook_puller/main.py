@@ -51,7 +51,7 @@ def run(config):
     with open(data_file_path, 'r+') as f:
         headers_string = f.readline().strip()
         headers_list = headers_string.split(',')
-        headers_dict = {header: 'VARCHAR' for header in headers_list}
+        headers_dict = [{'name': header, 'type': 'VARCHAR'} for header in headers_list]
 
         all_lines = f.readlines()
         data_lines = all_lines[1:-1]
@@ -82,9 +82,12 @@ def load_config(file_path):
     raw_config = load_json(file_path)
     print('RAW CONFIG', raw_config)
 
-    pat = raw_config.get('pat', None)
-    username = raw_config.get('username', None)
     data_file_path = raw_config.get('dataFilePath', None)
+
+    sub_config = raw_config.get('config')
+    pat = sub_config.get('pat', None)
+    username = sub_config.get('username', None)
+    
 
     return Config(pat, username, data_file_path)
 
