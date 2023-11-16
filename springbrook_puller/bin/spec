@@ -8,10 +8,10 @@ cat <<EOF
         "type": "object",
         "properties": {
             "username": {
-                "type": "string"
+                "type": "secret"
                 },
-            "pat": {
-                "type": "string"
+            "personal access token": {
+                "type": "secret"
             }
         }
     }
