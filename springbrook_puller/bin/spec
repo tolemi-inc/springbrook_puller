@@ -8,9 +8,10 @@ cat <<EOF
         "type": "object",
         "properties": {
             "username": {
-                "type": "varchar"}
+                "type": "string"
+                },
             "pat": {
-                "type": "varchar"
+                "type": "string"
             }
         }
     }
