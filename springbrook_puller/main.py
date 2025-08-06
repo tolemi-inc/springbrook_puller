@@ -80,11 +80,12 @@ def fail(error):
 
 def load_config(file_path):
     raw_config = load_json(file_path)
-    #print('RAW CONFIG', raw_config)
+    # print('RAW CONFIG', raw_config)
 
+    sub_config = raw_config.get('config')
     data_file_path = raw_config.get('dataFilePath', None)
-    pat = raw_config.get('personal access token', None)
-    username = raw_config.get('username', None)
+    pat = sub_config.get('personal access token', None)
+    username = sub_config.get('username', None)
 
     return Config(pat, username, data_file_path)
 
