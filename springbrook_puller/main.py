@@ -40,8 +40,8 @@ def run(config):
     data_file_path = config.data_file_path
 
     server, tableau_auth = start_server(username, pat)
-    report_id = "0d5f855b-588b-4a4a-9c88-00daf260c510"  # Static workbook ID
-    report_view_id = 'b1c1613b-7fcc-48ba-8d03-4b659a8334cb'  # Static workbook 'view' ID
+    report_id = 'bb0c3b42-a713-413c-b055-723287a3c1f6' # Static workbook ID
+    report_view_id = '3257b366-e64c-4816-9f15-c4a9033693fc' # Static workbook 'view' ID
 
     # dumpReportsbyID(server, tableau_auth, report_id)
     dlReportbyID(server, tableau_auth, report_view_id, data_file_path)
@@ -80,14 +80,12 @@ def fail(error):
 
 def load_config(file_path):
     raw_config = load_json(file_path)
-    #print('RAW CONFIG', raw_config)
-
-    data_file_path = raw_config.get('dataFilePath', None)
+    # print('RAW CONFIG', raw_config)
 
     sub_config = raw_config.get('config')
+    data_file_path = raw_config.get('dataFilePath', None)
     pat = sub_config.get('personal access token', None)
     username = sub_config.get('username', None)
-    
 
     return Config(pat, username, data_file_path)
 
