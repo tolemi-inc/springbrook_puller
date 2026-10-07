@@ -1,3 +1,5 @@
+**This repo has been archived and can now be found at <https://github.com/tolemi-inc/angel/tree/main/angel/pullers/springbrook>**
+
 # container_template
 Template to containerize a script for swarm. Scripts in any language can be containerized according to this general pattern, but this repo and guide are primarily concerned with containerizing Python.
 
